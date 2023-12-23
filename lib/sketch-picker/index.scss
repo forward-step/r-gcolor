@@ -1,0 +1,19 @@
+@import '@/global.scss';
+
+@include b(sketch-picker) {
+    width: 220px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;
+    border-radius: 4px;
+    @include e(ha) {
+        display: grid;
+        gap: 4px;
+        grid-template-columns: 1fr 24px;
+        grid-template-rows: 10px 10px;
+        margin: 4px 0px;
+        @include e(preview) {
+            grid-row: span 2;
+        }
+    }
+}

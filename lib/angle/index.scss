@@ -1,0 +1,28 @@
+@import '../global.scss';
+$point-color: #1F2667;
+$size: 36px;
+
+@include b(angle) {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    @include e(wrapper) {
+        flex-shrink: 0;
+        @extend %container;
+        width: $size;
+        height: $size;
+        border-radius: 100%;
+        border: 3px solid $point-color;
+    
+        @include e(pointer) {
+            position: absolute;
+            top: 3px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            transform: translateX(-50%);
+            background-color: $point-color;
+            border-radius: 100%;
+        }
+    }
+}

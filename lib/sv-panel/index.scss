@@ -1,0 +1,23 @@
+@import '../global.scss';
+
+@include b(sv-panel) {
+    @extend %container;
+    &::before {
+        content: '';
+        @extend %inset-0;
+        background: linear-gradient(to right,#fff,rgba(255,255,255,0));
+    }
+    &::after {
+        content: '';
+        @extend %inset-0;
+        background: linear-gradient(to top,#000,rgba(0,0,0,0));
+    }
+    @include e(thumb) {
+        @extend %thumb;
+        width: $size;
+        height: $size;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px #0000004d, 0 0 1px 2px #0006;
+        border-radius: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+@import '../global.scss';
+$bar-height: 12px;
+
+@include b(gradient-bar) {
+    display: inline-flex;
+    width: 280px;
+    height: 40px;
+    align-items: flex-end;
+    gap: 6px;
+    margin-bottom: 12px;
+    @include e(container) {
+        flex: 1;
+        @include e(colors) {
+            z-index: 1;
+            @extend %container;
+        }
+
+        @include e(bar) {
+            display: flex;
+            height: $bar-height;
+            @include m(click) {
+                cursor: copy;
+            }
+        }
+    }
+    // 按钮
+    @include e(btn) {
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: $bar-height;
+        height: $bar-height;
+        line-height: 1;
+        border: 1px solid #d9d7d7;
+        color: #d9d7d7;
+        cursor: pointer;
+        @include when(disabled) {
+            cursor: not-allowed;
+        }
+    }
+}

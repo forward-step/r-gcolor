@@ -1,0 +1,29 @@
+@import '@/global.scss';
+
+@include b(color-picker) {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #ebeef5;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: white;
+    .#{$single-picker} {
+        box-shadow: none;
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+    @include e(row) {
+        @include m(filter) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include m(two) {
+            justify-content: space-around;
+        }
+    }
+}

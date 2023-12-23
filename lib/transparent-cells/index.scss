@@ -1,0 +1,13 @@
+@import '@/global.scss';
+
+@include b(transparent-cells) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    & > span {
+        @extend %inset-0;
+    }
+    @include e(cells) {
+        @extend %alpha-cells;
+    }
+}

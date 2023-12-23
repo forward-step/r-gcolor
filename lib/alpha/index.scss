@@ -1,0 +1,14 @@
+@import '../global.scss';
+
+@include b(alpha) {
+    @extend %container;
+    @include e(thumb) {
+        @extend %thumb;
+        @include m(horizontal) {
+            @extend %thumb-horizontal;
+        }
+        @include m(vertical) {
+            @extend %thumb-vertical;
+        }
+    }
+}

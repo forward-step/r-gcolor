@@ -1,0 +1,34 @@
+@import '@/global.scss';
+
+$triangle-width: 5px;
+$triangle-height: 6px;
+
+@include b(color-pointer) {
+    @extend %flex-center;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-$triangle-height);
+    border: 1px solid #d9d7d7;
+    background-color: white;
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        transform: translateY(100%);
+        border-left: $triangle-width solid transparent; /* 左侧设置为透明 */
+        border-right: $triangle-width solid transparent; /* 右侧设置为透明 */
+        border-top: $triangle-height solid gray; /* 上方设置为实心颜色 */
+    }
+
+    @include when(active) {
+        z-index: 2;
+        border-color: #57a4ff;
+    }
+
+    @include e(block) {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+    }
+}

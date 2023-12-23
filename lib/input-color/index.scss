@@ -1,0 +1,13 @@
+@import '@/global.scss';
+
+@include b(input-color) {
+    font-size: 12px;
+    @include e(select) {
+        margin-right: 8px;
+        @extend %input;
+    }
+
+    @include e(input) {
+        @extend %input;
+    }
+}

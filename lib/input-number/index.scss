@@ -1,0 +1,6 @@
+@import '@/global.scss';
+
+@include b(input) {
+    width: 42px;
+    @extend %input;
+}

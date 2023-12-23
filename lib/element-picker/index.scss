@@ -1,0 +1,20 @@
+@import '../global.scss';
+
+@include b(element-picker) {
+    width: 298px;
+    display: inline-block;
+    padding: 6px;
+    border: 1px solid #ebeef5;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    background-color: white;
+    @include e(container) {
+        display: grid;
+        grid-template-columns: 280px 12px;
+        grid-template-rows: 180px 12px;
+        gap: 6px;
+    }
+    @include e(input) {
+        margin-top: 6px;
+    }
+}
