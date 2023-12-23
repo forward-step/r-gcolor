@@ -1,10 +1,5 @@
 # [React Color Picker](https://github.com/forward-step/r-color)
 
-[![Npm Version][npm-version-image]][npm-version-url]
-[![Build Status][travis-svg]][travis-url]
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
-
 * **小组件** - 灵活自定义拾色器布局
 
 * **颜色渐变** - 支持纯色、线性渐变、径向渐变、锥形渐变
