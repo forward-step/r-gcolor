@@ -33,12 +33,13 @@ export function ColorPicker({
         x?: number;
         y?: number;
     }>(() => {
-        if (isGradientColor(value))
+        if (isGradientColor(value)) {
             return {
                 angle: 0,
                 ...value,
                 singleColor: value.colors[current].color,
             };
+        }
         return {
             type: COLOR_TYPE.SINGLE,
             angle: 0,
@@ -46,8 +47,9 @@ export function ColorPicker({
             singleColor: value,
         };
     }, [value, current]);
-
     const [formatType, setFormatType] = useState(type);
+
+    // 切换颜色类型
     const handleFormatTypeChange = (type: string) => {
         if (formatType === type || !onChange) return;
         /// gradient
@@ -95,6 +97,7 @@ export function ColorPicker({
         }
 
         setFormatType(type as any);
+        setCurrent(0);
     };
 
     const handleGradientChange = (colors: GradientColorItem[]) => {
